@@ -28,3 +28,13 @@
     X.describe()
     X.head()
     
+    from sklearn.tree import DecisionTreeRegressor
+    #   define model, specify a number for random state to ensure same results each run
+    melbmodel = DecisionTreeRegressor(random_state=1)
+    melbmodel.fit(X,y)
+
+    print('Making predictions for the following 5 houses')
+    print(X.heaad())
+    print('The predictions are')
+    print(mebmodel.predict(X.head()))
+    
