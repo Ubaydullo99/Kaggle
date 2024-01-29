@@ -11,12 +11,13 @@
     melbdata = pd.read_csv(file_path)
     melbdata.describe()   # summary of data
 
-- 1st ml model
 
-listing all columns code
+
+
+1st ml model
 
     import pandas as pd
-    melbdata.columns
+    melbdata.columns      # listing all columns code
 
     melbdatana = melbdata.dropna(axis=0)     # drop not available = missing values
 
