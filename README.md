@@ -37,4 +37,8 @@
     print(X.heaad())
     print('The predictions are')
     print(mebmodel.predict(X.head()))
+
+
+model validation
+
     
