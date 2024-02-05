@@ -4,7 +4,7 @@
 
 * [Data_Explore](#data_explore) 
 
-## Data_explore  
+## Data_explore   
 
     import pandas as pd
     file_path = '../input/melbourne-housing-snapshot/melb_data.csv'
