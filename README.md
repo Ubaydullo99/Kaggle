@@ -39,7 +39,17 @@
     print(mebmodel.predict(X.head()))
 
 
-model validation
+model validation   - measure quality of model
 
+    # On average, our predictions are off by about X.
+
+    from sklearn.model_selection import train_test_split
+    train_X, val_X, train_y, val_y = train_test_split(X,y, random_state = 0)
+    melbmodel = DecisionTreeRegressor()
+    melbmodel.fit(train_X, train_y)
+    val_predictions = melbmodel.predict(val_X)
+    print(mean_absolute_error(val_y, val_predictions))
+    
+    
     
     
