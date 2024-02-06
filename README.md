@@ -2,7 +2,7 @@
 
 ## Table of contents:
  
-* [ML](#data_explore) 
+* [ML](#ml) 
 
 ## ML 
  
