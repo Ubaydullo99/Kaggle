@@ -49,7 +49,30 @@ model validation   - measure quality of model
     melbmodel.fit(train_X, train_y)
     val_predictions = melbmodel.predict(val_X)
     print(mean_absolute_error(val_y, val_predictions))
-    
-    
+
+
+underfitting and overfitting
+
+![image](https://github.com/UbaydullohML/ML-Kaggle/assets/75980506/34af354e-dff2-4015-a10e-c4f6f2a33d6f)
+
+![image](https://github.com/UbaydullohML/ML-Kaggle/assets/75980506/ce7af62e-ef2d-49ea-a79b-81b42878d760)
+
+    # max_leaf_nodes - sensible way to control overfitting and underfitting
+    from sklearn.metrics import mean_absolute_error
+    from sklearn.tree import DecisionTreeRegressor
+    def get_mae(max_leaf_nodes, train_X, val_X, train_y, val_y):
+        model = DecisionTreeRegressor(max_leaf_nodes=max_leaf_nodes, random_state=0)
+        model.fit(train_X, train_Y)
+        pred_val = model.predict(val_X)
+        mae=mean_absolute_error(val_y, pred_val)
+        return(mae)
+
+    # compare MAE with different values of max_leaf_nodes
+    for max_leaf_nodes in [5,50,500,5000]:
+        my_mae = get_mae(max_leaf_nodes, train_X, val_X, train_y, val_y)
+        print('Max leaf nodes: &d \t\t Mean absolute error: %d' %(max_leaf_nodes, my_mae)
+
+![image](https://github.com/UbaydullohML/ML-Kaggle/assets/75980506/b78342a9-837a-44ae-8952-a4e9d68045a2)
+
     
     
