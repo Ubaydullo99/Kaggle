@@ -2,9 +2,9 @@
 
 ## Table of contents:
  
-* [Data_Explore](#data_explore) 
+* [ML](#data_explore) 
 
-## Data_explore   
+## ML 
  
     import pandas as pd
     file_path = '../input/melbourne-housing-snapshot/melb_data.csv'
@@ -13,7 +13,6 @@
 
  
  
-
 1st ml model
 
     import pandas as pd
