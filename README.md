@@ -11,7 +11,7 @@
     melbdata = pd.read_csv(file_path)
     melbdata.describe()   # summary of data
 
- 
+
  
 1st ml model
 
