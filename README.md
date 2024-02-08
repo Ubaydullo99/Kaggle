@@ -15,7 +15,7 @@
  
 1st ml model
 
-    import pandas as pd
+    import pandas as pd 
     melbdata.columns      # listing all columns code
 
     melbdatana = melbdata.dropna(axis=0)     # drop not available = missing values
