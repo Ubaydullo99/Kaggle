@@ -69,9 +69,20 @@ underfitting and overfitting
     # compare MAE with different values of max_leaf_nodes
     for max_leaf_nodes in [5,50,500,5000]:
         my_mae = get_mae(max_leaf_nodes, train_X, val_X, train_y, val_y)
-        print('Max leaf nodes: &d \t\t Mean absolute error: %d' %(max_leaf_nodes, my_mae)
+        print('Max leaf nodes: &d \t\t Mean absolute error: %d' %(max_leaf_nodes, my_mae))
 
 ![image](https://github.com/UbaydullohML/ML-Kaggle/assets/75980506/b78342a9-837a-44ae-8952-a4e9d68045a2)
 
-    
-    
+
+Random Forests
+
+    # random forests uses many trees, and it makes a prediction by averaging the predictions of each componenet tree
+
+    from sklearn.ensemble import RandomForestRegressor
+    from sklearn.metrics import mean_absolute_error
+
+    forestmodel = RandomForestRegressor
+    foresmodel.fit(train_X, train_y)
+    prediction = forestmodel.predict(val_X)
+    print(mean_absolute_error(val_y, prediction))
+
